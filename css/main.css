@@ -122,3 +122,9 @@ video.frame-media_left {
 .soundbutton.paused {
 	opacity: .25;
 }
+.back{
+	color: white;
+	text-align: center;
+	font-size: 25px;
+	opacity: 0.75;
+  }
