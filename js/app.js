@@ -26,20 +26,10 @@ window.onscroll = function() {
 
 window.scrollTo(0, 1)
 
-// Audio
+let navbar = document.getElementById('navbar').classList
+let active_class = "navbar_scrolled"
 
-let soundButton = document.querySelector('.soundbutton'),
-		audio = document.querySelector('.audio')
-
-soundButton.addEventListener('click', e => {
-	soundButton.classList.toggle('paused')
-	audio.paused ? audio.play() : audio.pause()
+window.addEventListener('scroll', e => {
+  if(pageYOffset > 500) navbar.add(active_class)
+  else navbar.remove(active_class)
 })
-
-window.onfocus = function() {
-	soundButton.classList.contains('paused') ? audio.pause() : audio.play()
-}
-
-window.onblur = function() {
-	audio.pause()
-}
